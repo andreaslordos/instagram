@@ -20,6 +20,9 @@
 		BF99997B286A47E5007299A4 /* InstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF99997A286A47E5007299A4 /* InstagramTests.m */; };
 		BF999985286A47E5007299A4 /* InstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF999984286A47E5007299A4 /* InstagramUITests.m */; };
 		BF999987286A47E5007299A4 /* InstagramUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF999986286A47E5007299A4 /* InstagramUITestsLaunchTests.m */; };
+		BF9999A6286A61A9007299A4 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = BF9999A5286A61A9007299A4 /* Fonts */; };
+		BF9999A9286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF9999A7286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf */; };
+		BF9999AA286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF9999A8286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		BF999980286A47E5007299A4 /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF999984286A47E5007299A4 /* InstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramUITests.m; sourceTree = "<group>"; };
 		BF999986286A47E5007299A4 /* InstagramUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramUITestsLaunchTests.m; sourceTree = "<group>"; };
+		BF9999A5286A61A9007299A4 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		BF9999A7286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf"; sourceTree = "<group>"; };
+		BF9999A8286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf"; sourceTree = "<group>"; };
 		C639A757E4F53C32D265F32A /* Pods-InstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramTests.release.xcconfig"; path = "Target Support Files/Pods-InstagramTests/Pods-InstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9969A134499E742E4489127 /* Pods_Instagram_InstagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram_InstagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAAAE1801C26C75C08045C7 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +115,8 @@
 		BF999952286A47E4007299A4 = {
 			isa = PBXGroup;
 			children = (
+				BF9999A7286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf */,
+				BF9999A8286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf */,
 				BF99995D286A47E4007299A4 /* Instagram */,
 				BF999979286A47E5007299A4 /* InstagramTests */,
 				BF999983286A47E5007299A4 /* InstagramUITests */,
@@ -131,6 +139,11 @@
 		BF99995D286A47E4007299A4 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				BF99999F286A60C0007299A4 /* Assets */,
+				BF99999E286A60B1007299A4 /* Views */,
+				BF99999D286A60A4007299A4 /* Models */,
+				BF99999C286A6099007299A4 /* API */,
+				BF99999B286A6071007299A4 /* View Controllers */,
 				BF99995E286A47E4007299A4 /* AppDelegate.h */,
 				BF99995F286A47E4007299A4 /* AppDelegate.m */,
 				BF999961286A47E4007299A4 /* SceneDelegate.h */,
@@ -138,7 +151,6 @@
 				BF999964286A47E4007299A4 /* ViewController.h */,
 				BF999965286A47E4007299A4 /* ViewController.m */,
 				BF999967286A47E4007299A4 /* Main.storyboard */,
-				BF99996A286A47E4007299A4 /* Assets.xcassets */,
 				BF99996C286A47E4007299A4 /* LaunchScreen.storyboard */,
 				BF99996F286A47E4007299A4 /* Info.plist */,
 				BF999970286A47E4007299A4 /* main.m */,
@@ -163,6 +175,43 @@
 			path = InstagramUITests;
 			sourceTree = "<group>";
 		};
+		BF99999B286A6071007299A4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BF99999C286A6099007299A4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		BF99999D286A60A4007299A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF99999E286A60B1007299A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF99999F286A60C0007299A4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BF9999A5286A61A9007299A4 /* Fonts */,
+				BF99996A286A47E4007299A4 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		E7605E1CFD9C9EF5C52F029C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +222,6 @@
 				3F186F6EA01F7B1E26B2596F /* Pods-InstagramTests.debug.xcconfig */,
 				C639A757E4F53C32D265F32A /* Pods-InstagramTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -288,6 +336,9 @@
 				BF99996E286A47E4007299A4 /* LaunchScreen.storyboard in Resources */,
 				BF99996B286A47E4007299A4 /* Assets.xcassets in Resources */,
 				BF999969286A47E4007299A4 /* Main.storyboard in Resources */,
+				BF9999AA286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf in Resources */,
+				BF9999A6286A61A9007299A4 /* Fonts in Resources */,
+				BF9999A9286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
