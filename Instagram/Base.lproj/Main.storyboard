@@ -7,15 +7,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf">
+        <array key="Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf">
             <string>FONTSPRINGDEMO-BlueVinylRegular</string>
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,6 +39,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrT-gF-MFa">
                                 <rect key="frame" x="30" y="348.5" width="354" height="34"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -50,6 +51,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGI-ny-S2r">
                                 <rect key="frame" x="30" y="397.5" width="354" height="34"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -70,6 +72,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jq6-Cm-UQe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQL-4X-M4L">
                                 <rect key="frame" x="0.0" y="834" width="414" height="28"/>
@@ -110,15 +115,36 @@
                             <constraint firstItem="ZGI-ny-S2r" firstAttribute="top" secondItem="qrT-gF-MFa" secondAttribute="bottom" constant="15" id="yfU-j5-fvq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="ZGI-ny-S2r" id="Sxm-m3-mlV"/>
+                        <outlet property="usernameField" destination="qrT-gF-MFa" id="f6X-Ik-G45"/>
+                        <segue destination="Uia-S5-qlQ" kind="show" identifier="loginSegue" id="d84-1c-KHy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="47.544642857142854"/>
         </scene>
-        <!--View Controller-->
+        <!--Timeline View Controller-->
+        <scene sceneID="grO-ol-Wbi">
+            <objects>
+                <viewController storyboardIdentifier="TimelineViewController" modalPresentationStyle="fullScreen" id="Uia-S5-qlQ" customClass="TimelineViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jcs-2I-qUX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FpD-vg-F2b"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zS0-Xd-66b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Fe-gt-amV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="48"/>
+        </scene>
+        <!--Signup View Controller-->
         <scene sceneID="FTw-5l-FgH">
             <objects>
-                <viewController id="HIZ-ga-qJC" sceneMemberID="viewController">
+                <viewController id="HIZ-ga-qJC" customClass="SignupViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uq3-G8-n2x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +152,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jsq-Sk-Iu5">
                                 <rect key="frame" x="30" y="228" width="354" height="34"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -160,10 +186,14 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signupButton:" destination="HIZ-ga-qJC" eventType="touchUpInside" id="wQ4-rd-v4R"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3NY-cz-7fh">
                                 <rect key="frame" x="30" y="277" width="354" height="34"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -194,12 +224,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tE6-jx-YpG"/>
+                    <connections>
+                        <outlet property="passwordField" destination="3NY-cz-7fh" id="rzg-wv-Kcg"/>
+                        <outlet property="usernameField" destination="Jsq-Sk-Iu5" id="IBW-3s-LgV"/>
+                        <segue destination="Uia-S5-qlQ" kind="show" identifier="signupSegue" id="Buh-pj-XLL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-dY-OG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="19" y="746"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Buh-pj-XLL"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="ig" width="512" height="512"/>
     </resources>

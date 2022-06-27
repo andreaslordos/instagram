@@ -23,6 +23,10 @@
 		BF9999A6286A61A9007299A4 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = BF9999A5286A61A9007299A4 /* Fonts */; };
 		BF9999A9286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF9999A7286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf */; };
 		BF9999AA286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF9999A8286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf */; };
+		BF9999AD286A62FD007299A4 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9999AC286A62FD007299A4 /* SignupViewController.m */; };
+		BF9999B8286A672A007299A4 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9999B7286A672A007299A4 /* TimelineViewController.m */; };
+		BF9999BB286A67F0007299A4 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9999BA286A67F0007299A4 /* Utilities.m */; };
+		BF9999BE286A6F48007299A4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9999BD286A6F48007299A4 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,14 @@
 		BF9999A5286A61A9007299A4 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		BF9999A7286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf"; sourceTree = "<group>"; };
 		BF9999A8286A62A2007299A4 /* Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf 15-06-11-347.otf"; sourceTree = "<group>"; };
+		BF9999AB286A62FD007299A4 /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		BF9999AC286A62FD007299A4 /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		BF9999B6286A672A007299A4 /* TimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
+		BF9999B7286A672A007299A4 /* TimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
+		BF9999B9286A67F0007299A4 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		BF9999BA286A67F0007299A4 /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		BF9999BC286A6F48007299A4 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		BF9999BD286A6F48007299A4 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C639A757E4F53C32D265F32A /* Pods-InstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramTests.release.xcconfig"; path = "Target Support Files/Pods-InstagramTests/Pods-InstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9969A134499E742E4489127 /* Pods_Instagram_InstagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram_InstagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAAAE1801C26C75C08045C7 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +190,12 @@
 		BF99999B286A6071007299A4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF9999AB286A62FD007299A4 /* SignupViewController.h */,
+				BF9999AC286A62FD007299A4 /* SignupViewController.m */,
+				BF9999B6286A672A007299A4 /* TimelineViewController.h */,
+				BF9999B7286A672A007299A4 /* TimelineViewController.m */,
+				BF9999BC286A6F48007299A4 /* LoginViewController.h */,
+				BF9999BD286A6F48007299A4 /* LoginViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -185,6 +203,8 @@
 		BF99999C286A6099007299A4 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				BF9999B9286A67F0007299A4 /* Utilities.h */,
+				BF9999BA286A67F0007299A4 /* Utilities.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -466,10 +486,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9999BE286A6F48007299A4 /* LoginViewController.m in Sources */,
 				BF999966286A47E4007299A4 /* ViewController.m in Sources */,
 				BF999960286A47E4007299A4 /* AppDelegate.m in Sources */,
 				BF999971286A47E4007299A4 /* main.m in Sources */,
 				BF999963286A47E4007299A4 /* SceneDelegate.m in Sources */,
+				BF9999AD286A62FD007299A4 /* SignupViewController.m in Sources */,
+				BF9999BB286A67F0007299A4 /* Utilities.m in Sources */,
+				BF9999B8286A672A007299A4 /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
