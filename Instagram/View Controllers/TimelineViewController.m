@@ -6,8 +6,13 @@
 //
 
 #import "TimelineViewController.h"
+#import "LoginViewController.h"
+#import "AppDelegate.h"
+#import "SceneDelegate.h"
+#import <Parse/Parse.h>
 
 @interface TimelineViewController ()
+- (IBAction)didTapLogout:(id)sender;
 
 @end
 
@@ -28,4 +33,21 @@
 }
 */
 
+- (IBAction)didTapLogout:(id)sender {
+    
+    // clear access tokens
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        // PFUser.current() will now be nil
+    }];
+    
+    // use scenedelegate and check what naveen posted in workplace
+    SceneDelegate *sceneDelegate = (SceneDelegate *)UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
+
+    // switch root view controller back to login page
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    sceneDelegate.window.rootViewController = loginViewController;
+    
+    
+}
 @end
