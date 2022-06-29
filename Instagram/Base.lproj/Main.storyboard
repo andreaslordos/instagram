@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJ0-He-ly3">
-                                <rect key="frame" x="57" y="266" width="300" height="57.5"/>
+                                <rect key="frame" x="57" y="266" width="300" height="51.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="ft9-18-5jE"/>
                                 </constraints>
@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrT-gF-MFa">
-                                <rect key="frame" x="30" y="348.5" width="354" height="34"/>
+                                <rect key="frame" x="30" y="342.5" width="354" height="34"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -50,7 +50,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGI-ny-S2r">
-                                <rect key="frame" x="30" y="397.5" width="354" height="34"/>
+                                <rect key="frame" x="30" y="391.5" width="354" height="34"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,7 +62,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXY-Vs-CxW">
-                                <rect key="frame" x="30" y="461.5" width="354" height="30.5"/>
+                                <rect key="frame" x="30" y="455.5" width="354" height="30.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -142,20 +142,25 @@
             </objects>
             <point key="canvasLocation" x="2842.0289855072465" y="298.66071428571428"/>
         </scene>
-        <!--Timeline View Controller-->
+        <!--Home Feed-->
         <scene sceneID="CsN-kg-TWc">
             <objects>
                 <viewController storyboardIdentifier="TimelineViewController" modalPresentationStyle="fullScreen" id="xjy-MP-maA" customClass="TimelineViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16f-eS-Gxk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="K5c-or-nOB"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XV7-l8-F3x">
+                    <navigationItem key="navigationItem" title="Home Feed" id="XV7-l8-F3x">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="H0f-wd-FzI">
                             <connections>
                                 <action selector="didTapLogout:" destination="xjy-MP-maA" id="fXl-tO-Bme"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" style="plain" id="1cK-Lc-nRa">
+                            <connections>
+                                <segue destination="0ed-zG-sgj" kind="show" id="MRk-BH-rsB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -163,6 +168,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1P-Eb-4ia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2866.666666666667" y="-404.46428571428572"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Tz-Rd-bwI">
+            <objects>
+                <navigationController modalPresentationStyle="fullScreen" id="0ed-zG-sgj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="l2C-ZM-2jD">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="K8t-Aw-l4a"/>
+                    </navigationItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="BHA-wf-07c">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hPq-Vc-t1Q" kind="relationship" relationship="rootViewController" id="UjE-MR-Kda"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ot-1M-Dd8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3875" y="-404"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="a3i-Sw-p7Z">
@@ -301,7 +328,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="x2B-Ur-gPS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Timeline" id="UXK-wo-aBb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UDq-w3-XzR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="UDq-w3-XzR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -314,12 +341,86 @@
             </objects>
             <point key="canvasLocation" x="1932" y="-404"/>
         </scene>
+        <!--Compose-->
+        <scene sceneID="ZBF-Gp-cAR">
+            <objects>
+                <viewController title="Compose" modalPresentationStyle="fullScreen" id="hPq-Vc-t1Q" customClass="ComposeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rFc-u8-pt4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCw-fu-m6M">
+                                <rect key="frame" x="20" y="76" width="138" height="138"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="20s-Ct-ABF"/>
+                                    <constraint firstAttribute="height" constant="138" id="wez-VD-NKm"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mP-VL-bmO">
+                                <rect key="frame" x="166" y="76" width="228" height="138"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXl-HS-vxM">
+                                <rect key="frame" x="20" y="222" width="138" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Take a photo"/>
+                                <connections>
+                                    <action selector="takePhotoButton:" destination="hPq-Vc-t1Q" eventType="touchUpInside" id="Nnm-CO-k6z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c3c-TA-Uj4"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9mP-VL-bmO" firstAttribute="top" secondItem="PCw-fu-m6M" secondAttribute="top" id="A1u-5f-RQ4"/>
+                            <constraint firstItem="AXl-HS-vxM" firstAttribute="top" secondItem="PCw-fu-m6M" secondAttribute="bottom" constant="8" symbolic="YES" id="Pa7-Vy-0qr"/>
+                            <constraint firstItem="c3c-TA-Uj4" firstAttribute="trailing" secondItem="9mP-VL-bmO" secondAttribute="trailing" constant="20" id="dAr-wb-Cfz"/>
+                            <constraint firstItem="PCw-fu-m6M" firstAttribute="top" secondItem="c3c-TA-Uj4" secondAttribute="top" constant="20" id="fyq-YW-9bS"/>
+                            <constraint firstItem="PCw-fu-m6M" firstAttribute="leading" secondItem="c3c-TA-Uj4" secondAttribute="leading" constant="20" id="m8K-s7-hX8"/>
+                            <constraint firstItem="9mP-VL-bmO" firstAttribute="leading" secondItem="PCw-fu-m6M" secondAttribute="trailing" constant="8" symbolic="YES" id="uIX-XL-V6o"/>
+                            <constraint firstItem="AXl-HS-vxM" firstAttribute="leading" secondItem="PCw-fu-m6M" secondAttribute="leading" id="y1y-Zb-eaU"/>
+                            <constraint firstItem="9mP-VL-bmO" firstAttribute="bottom" secondItem="PCw-fu-m6M" secondAttribute="bottom" id="y6A-9e-L0a"/>
+                            <constraint firstItem="AXl-HS-vxM" firstAttribute="trailing" secondItem="PCw-fu-m6M" secondAttribute="trailing" id="yTV-al-STG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Compose" id="bqI-c1-Qxr">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="bSY-tT-Ma8"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="fH9-bv-T4p">
+                            <connections>
+                                <segue destination="xjy-MP-maA" kind="show" id="nC8-pa-NUv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="dgG-jf-e4I">
+                            <connections>
+                                <action selector="shareButton:" destination="hPq-Vc-t1Q" id="wFr-aC-fBK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraButton" destination="AXl-HS-vxM" id="oKZ-ce-bfp"/>
+                        <outlet property="caption" destination="9mP-VL-bmO" id="Jwu-tt-g1M"/>
+                        <outlet property="previewImage" destination="PCw-fu-m6M" id="mCM-Hj-c4B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4w-a6-ezB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4786.9565217391309" y="-404.46428571428572"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6Wm-Jf-kn8"/>
+        <segue reference="nC8-pa-NUv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ig" width="512" height="512"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
