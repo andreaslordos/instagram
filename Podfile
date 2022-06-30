@@ -5,7 +5,8 @@ target 'Instagram' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Parse'
-
+  pod 'Parse/UI'
+  pod 'DateTools'
   # Pods for Instagram
 
   target 'InstagramTests' do

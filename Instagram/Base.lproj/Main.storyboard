@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJ0-He-ly3">
-                                <rect key="frame" x="57" y="266" width="300" height="51.5"/>
+                                <rect key="frame" x="57" y="266" width="300" height="57.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="ft9-18-5jE"/>
                                 </constraints>
@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrT-gF-MFa">
-                                <rect key="frame" x="30" y="342.5" width="354" height="34"/>
+                                <rect key="frame" x="30" y="348.5" width="354" height="34"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -50,7 +50,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGI-ny-S2r">
-                                <rect key="frame" x="30" y="391.5" width="354" height="34"/>
+                                <rect key="frame" x="30" y="397.5" width="354" height="34"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,7 +62,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXY-Vs-CxW">
-                                <rect key="frame" x="30" y="455.5" width="354" height="30.5"/>
+                                <rect key="frame" x="30" y="461.5" width="354" height="30.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -126,17 +126,17 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="47.544642857142854"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="Oy5-0k-P2j">
             <objects>
-                <viewController id="z8b-dO-hHD" sceneMemberID="viewController">
+                <viewController title="Profile" modalPresentationStyle="fullScreen" id="z8b-dO-hHD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iWt-V9-cox">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="BZE-fa-guw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="68a-d0-53Y"/>
+                    <navigationItem key="navigationItem" title="Profile" id="68a-d0-53Y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enA-zI-Oz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,8 +147,26 @@
             <objects>
                 <viewController storyboardIdentifier="TimelineViewController" modalPresentationStyle="fullScreen" id="xjy-MP-maA" customClass="TimelineViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16f-eS-Gxk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-QO-qOS">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="InstagramPostTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstagramPostTableViewCell" id="e4c-ys-NFx" customClass="InstagramPostTableViewCell">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e4c-ys-NFx" id="aaj-Os-vMk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="K5c-or-nOB"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -164,6 +182,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="DDa-QO-qOS" id="zXf-I4-s6Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1P-Eb-4ia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,7 +217,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="tabcontroller" modalPresentationStyle="fullScreen" id="IYI-dr-7zN" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="SOq-fz-BXJ"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1EW-o7-H7l">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="1EW-o7-H7l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -296,7 +317,7 @@
                     <connections>
                         <outlet property="passwordField" destination="3NY-cz-7fh" id="rzg-wv-Kcg"/>
                         <outlet property="usernameField" destination="Jsq-Sk-Iu5" id="IBW-3s-LgV"/>
-                        <segue destination="IYI-dr-7zN" kind="show" identifier="singupSegue" id="IW3-cC-ZYs"/>
+                        <segue destination="IYI-dr-7zN" kind="show" identifier="signupSegue" id="IW3-cC-ZYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-dY-OG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -346,11 +367,11 @@
             <objects>
                 <viewController title="Compose" modalPresentationStyle="fullScreen" id="hPq-Vc-t1Q" customClass="ComposeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rFc-u8-pt4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCw-fu-m6M">
-                                <rect key="frame" x="20" y="76" width="138" height="138"/>
+                                <rect key="frame" x="20" y="108" width="138" height="138"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="138" id="20s-Ct-ABF"/>
@@ -358,14 +379,14 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mP-VL-bmO">
-                                <rect key="frame" x="166" y="76" width="228" height="138"/>
+                                <rect key="frame" x="166" y="108" width="228" height="138"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXl-HS-vxM">
-                                <rect key="frame" x="20" y="222" width="138" height="31"/>
+                                <rect key="frame" x="20" y="254" width="138" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Take a photo"/>
                                 <connections>
@@ -412,17 +433,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Wm-Jf-kn8"/>
-        <segue reference="nC8-pa-NUv"/>
+        <segue reference="IW3-cC-ZYs"/>
+        <segue reference="4Mv-ap-NxS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ig" width="512" height="512"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

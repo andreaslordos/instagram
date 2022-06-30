@@ -16,6 +16,7 @@
 @dynamic image;
 @dynamic likeCount;
 @dynamic commentCount;
+@dynamic createdAt;
 
 + (nonnull NSString *)parseClassName {
     return @"Post";
@@ -49,6 +50,29 @@
     
     return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
 }
+
+
+//- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+//    self = [super init];
+//    if (self) {
+//        self.caption = dictionary[@"caption"];
+//        self.author = dictionary[@"author"];
+//        self.image = dictionary[@"image"];
+//        self.commentCount = dictionary[@"commentCount"];
+//        self.likeCount = dictionary[@"likeCount"];
+//    }
+//    return self;
+//}
+
+//+ (NSMutableArray *)postsWithArray:(NSArray *)dictionaries {
+//    NSMutableArray *posts = [NSMutableArray array];
+//    for (NSDictionary *dictionary in dictionaries) {
+//        NSLog(@"%@", dictionary);
+//        Post *post = [[Post alloc] initWithDictionary:dictionary];
+//        [posts addObject:post];
+//    }
+//    return posts;
+//}
 
     
 @end
