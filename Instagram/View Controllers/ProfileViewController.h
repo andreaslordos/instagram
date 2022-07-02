@@ -10,6 +10,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ProfileViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *username;
+@property (weak, nonatomic) IBOutlet UILabel *realname;
+@property (weak, nonatomic) IBOutlet UIImageView *profilepic;
+- (IBAction)tappedProfileButton:(id)sender;
 
 @end
 

@@ -11,6 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController">
             <connections>
                 <outlet property="collectionView" destination="IBO-8F-9Eo" id="cKy-OK-bni"/>
+                <outlet property="profilepic" destination="IiL-cJ-LqN" id="gBu-YW-bbO"/>
+                <outlet property="realname" destination="sNo-2o-V4j" id="Ihw-G7-ODL"/>
+                <outlet property="username" destination="Ei0-OT-n09" id="6H4-4L-sVS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,6 +48,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="gray" title="Edit Profile Picture"/>
+                    <connections>
+                        <action selector="tappedProfileButton:" destination="-1" eventType="touchUpInside" id="yHo-AQ-XYl"/>
+                    </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IBO-8F-9Eo">
                     <rect key="frame" x="0.0" y="248" width="414" height="614"/>
@@ -66,10 +72,10 @@
                 <constraint firstItem="IiL-cJ-LqN" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="DFn-1G-oWu"/>
                 <constraint firstItem="IBO-8F-9Eo" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="FAf-DU-t8d"/>
                 <constraint firstItem="Ei0-OT-n09" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JIC-Ea-4RZ"/>
+                <constraint firstItem="sNo-2o-V4j" firstAttribute="top" secondItem="IiL-cJ-LqN" secondAttribute="bottom" constant="5" id="U6W-a9-q7c"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="iPR-By-hAb" secondAttribute="trailing" constant="20" id="XVn-5l-Ckj"/>
                 <constraint firstItem="IBO-8F-9Eo" firstAttribute="top" secondItem="iPR-By-hAb" secondAttribute="bottom" constant="8" symbolic="YES" id="cTc-re-e9t"/>
                 <constraint firstItem="IiL-cJ-LqN" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="35" id="iHu-kA-5u8"/>
-                <constraint firstItem="sNo-2o-V4j" firstAttribute="top" secondItem="IiL-cJ-LqN" secondAttribute="bottom" constant="5" id="mxt-Sj-StA"/>
                 <constraint firstItem="Ei0-OT-n09" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="qFc-pq-4Ui"/>
                 <constraint firstItem="iPR-By-hAb" firstAttribute="leading" secondItem="sNo-2o-V4j" secondAttribute="trailing" constant="20" id="ril-Yg-x2w"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="IBO-8F-9Eo" secondAttribute="trailing" id="uFq-Tk-YlZ"/>

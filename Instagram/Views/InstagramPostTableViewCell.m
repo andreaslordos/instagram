@@ -43,10 +43,9 @@
 - (void)setPost:(Post *)post {
     _post = post;
     self.image.file = post.image;
+    [self.image loadInBackground];
     [self.username setText:post.author.username];
     [self setLikedText:[post.likeCount intValue]];
-    [self.image loadInBackground];
-    
     
     // set caption with username.
     NSString *yourString = [post.author.username stringByAppendingString:[@" " stringByAppendingString:post.caption]];

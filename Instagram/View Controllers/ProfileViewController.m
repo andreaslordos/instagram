@@ -7,15 +7,18 @@
 
 #import "ProfileViewController.h"
 #import "PostCollectionViewCell.h"
+#import <Parse/Parse.h>
+
 
 @interface ProfileViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
+@property (strong, nonatomic) PFUser *user;
 @end
 
 @implementation ProfileViewController
 
 -(void)viewWillAppear:(BOOL)animated{
+    self.user = [PFUser currentUser];
     [self.collectionView registerNib:[UINib nibWithNibName:@"PostCollectionViewCell" bundle:[NSBundle mainBundle]]
         forCellWithReuseIdentifier:@"PostCollectionViewCell"];
 }
@@ -47,4 +50,6 @@
 }
 
 
+- (IBAction)tappedProfileButton:(id)sender {
+}
 @end
